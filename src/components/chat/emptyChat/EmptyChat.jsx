@@ -1,6 +1,7 @@
 import { Box, styled, Typography, Divider } from "@mui/material";
 
-import { emptyChatImage } from "../../../constants/data";
+// import { emptyChatImage } from "../../../constants/data";
+import logo from "../../account/messenger.png"
 
 const Component = styled(Box)`
   background: #f8f9fa;
@@ -15,7 +16,8 @@ const Container = styled(Box)`
 
 const Image = styled("img")({
   marginTop: 100,
-  width: 400,
+  // width: 400,
+  height: 300,
 });
 
 const Title = styled(Typography)`
@@ -42,13 +44,10 @@ const EmptyChat = () => {
   return (
     <Component>
       <Container>
-        <Image src={emptyChatImage} alt="empty" />
-        <Title>WhatsApp Web</Title>
+        <Image src={logo} alt="empty" />
+        <Title>Me Chat Web</Title>
         <SubTitle>
-          Now send and receive messages without keeping your phone online.
-        </SubTitle>
-        <SubTitle>
-          Use WhatsApp on up to 4 linked devices and 1 phone at the same time.{" "}
+          Unlock a World of Conversations - Chat and Share with {"  "} Me Chat!
         </SubTitle>
         <StyledDivider />
       </Container>

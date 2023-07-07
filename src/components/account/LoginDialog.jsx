@@ -1,6 +1,6 @@
 import { Dialog, Box, Typography, styled, List, ListItem } from "@mui/material";
-
-import { qrCodeImage } from "../../constants/data";
+import image from './messenger.png'
+// import { qrCodeImage } from "../../constants/data";
 import jwt_decode from "jwt-decode";
 import { GoogleLogin } from "@react-oauth/google";
 import  {useContext} from 'react';
@@ -9,16 +9,17 @@ import { addUser } from "../../services/api";
 
 const Component = styled(Box)`
   display: flex;
+  flex-direction: column;
 `;
 
-const Container = styled(Box)`
-  padding: 56px 0 56px 56px;
+const Container1 = styled(Box)`
+  padding: 56px 0 0 56px;
 `;
 
-const QRCode = styled("img")({
-  height: 264,
-  width: 264,
-  margin: "50px 0 0 50px",
+const Logo = styled("img")({
+  height: 200,
+  // width: 50,
+  margin: "0 0 0 300px",
 });
 
 const Title = styled(Typography)`
@@ -26,12 +27,12 @@ const Title = styled(Typography)`
   color: #525252;
   font-weight: 300;
   font-family: inherit;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 `;
 const StyledList = styled(List)`
   & > li {
-    padding: 0;
-    margin-top: 15px;
+    padding: 0 0 20px 300px;
+    margin-top: 50px;
     font-size: 18px;
     line-height: 28px;
   }
@@ -60,30 +61,29 @@ const LoginDialog = () => {
   const onLoginError = (res) => {
     console.log("login failed", res);
   };
-
+  // const path ='./messenger.png'
   return (
-    <Dialog open={true}
-     PaperProps={{ sx: dialogstyle }}
-     hideBackdrop={true}
-     >
+    <Dialog open={true} PaperProps={{ sx: dialogstyle }} hideBackdrop={true}>
       <Component>
-        <Container>
-          <Title>To use WhatsApp on your computer:</Title>
-          <StyledList>
-            <ListItem>1. Open WhatsApp on your phone</ListItem>
-            <ListItem>2. Tap Menu Settings and select WhatsApp Web</ListItem>
-            <ListItem>
-              3. Point your phone to this screen to capture the code
-            </ListItem>
-          </StyledList>
-        </Container>
+        <Container1>
+          <Title>
+            Discover the Joy of Real-time Conversations - Chat and Share with Me
+            Chat!{" "}
+          </Title>
+        {/* <ima src= {image} alt = 'image' /> */}
+
+        </Container1>
         <Box style={{ position: "relative" }}>
-          <QRCode src={qrCodeImage} alt="QR code" />
+          <Logo src={image} alt="image" />
+          <StyledList>
+            {" "}
+            <ListItem> Sign In with Google Account</ListItem>{" "}
+          </StyledList>
           <Box
             style={{
-              position: "absolute",
-              top: "50%",
-              transform: "translateX(32%)",
+              // position: "absolute",
+              // top: "50%",
+              transform: "translateX(35%)",
             }}
           >
             <GoogleLogin onSuccess={onLoginSucess} onError={onLoginError} />
