@@ -28,6 +28,7 @@ const Title = styled(Typography)`
   font-weight: 300;
   font-family: inherit;
   margin-bottom: 20px;
+  text-align: center;
 `;
 const StyledList = styled(List)`
   & > li {

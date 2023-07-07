@@ -46,7 +46,7 @@ const EmptyChat = () => {
       <Container>
         <Image src={logo} alt="empty" />
         <Title>Me Chat Web</Title>
-        <SubTitle>
+        <SubTitle >
           Unlock a World of Conversations - Chat and Share with {"  "} Me Chat!
         </SubTitle>
         <StyledDivider />
