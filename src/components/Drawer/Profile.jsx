@@ -21,7 +21,7 @@ const BoxWrapper = styled(Box)`
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
   & :first-child {
     font-size: 13px;
-    color: #009688;
+    color: #80bfff;
     font-weight: 200;
   }
   & :last-child {
